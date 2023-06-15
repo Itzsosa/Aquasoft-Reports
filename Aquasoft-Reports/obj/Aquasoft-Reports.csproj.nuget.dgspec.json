@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lmaus\\Documents\\UCR\\4_year\\IF-7201\\Proyecto\\Aquasoft-Reports\\Aquasoft-Reports\\Aquasoft-Reports.csproj": {}
+    "C:\\Users\\carlo\\OneDrive - Universidad de Costa Rica\\Documentos\\GitHub\\Aquasoft-Reports\\Aquasoft-Reports\\Aquasoft-Reports.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lmaus\\Documents\\UCR\\4_year\\IF-7201\\Proyecto\\Aquasoft-Reports\\Aquasoft-Reports\\Aquasoft-Reports.csproj": {
+    "C:\\Users\\carlo\\OneDrive - Universidad de Costa Rica\\Documentos\\GitHub\\Aquasoft-Reports\\Aquasoft-Reports\\Aquasoft-Reports.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lmaus\\Documents\\UCR\\4_year\\IF-7201\\Proyecto\\Aquasoft-Reports\\Aquasoft-Reports\\Aquasoft-Reports.csproj",
+        "projectUniqueName": "C:\\Users\\carlo\\OneDrive - Universidad de Costa Rica\\Documentos\\GitHub\\Aquasoft-Reports\\Aquasoft-Reports\\Aquasoft-Reports.csproj",
         "projectName": "Aquasoft-Reports",
-        "projectPath": "C:\\Users\\lmaus\\Documents\\UCR\\4_year\\IF-7201\\Proyecto\\Aquasoft-Reports\\Aquasoft-Reports\\Aquasoft-Reports.csproj",
-        "packagesPath": "C:\\Users\\lmaus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lmaus\\Documents\\UCR\\4_year\\IF-7201\\Proyecto\\Aquasoft-Reports\\Aquasoft-Reports\\obj\\",
+        "projectPath": "C:\\Users\\carlo\\OneDrive - Universidad de Costa Rica\\Documentos\\GitHub\\Aquasoft-Reports\\Aquasoft-Reports\\Aquasoft-Reports.csproj",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carlo\\OneDrive - Universidad de Costa Rica\\Documentos\\GitHub\\Aquasoft-Reports\\Aquasoft-Reports\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\lmaus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

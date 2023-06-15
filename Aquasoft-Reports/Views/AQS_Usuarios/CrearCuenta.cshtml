@@ -1,0 +1,47 @@
+﻿@model Aquasoft_Reports.Models.AQS_Usuario
+@{
+    ViewData["Title"] = "CrearCuenta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Crear Cuenta</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+
+            @*Mensaje en caso que exista un error*@
+            @if (TempData["MensajeError"] != null)
+            {
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                    <strong>@TempData["MensajeError"]</strong>
+                </div>
+            }
+            <form asp-action="CrearCuenta" method="post">
+                <div class="form-group">
+                    <label asp-for="Correo" class="form-label">Email</label>
+                    <input type="email" asp-for="Correo" class="form-control" placeholder="nombre@dominio.com" />
+                    <span asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Contrasena" class="control-label">Password</label>
+                    <input asp-for="Contrasena" class="form-control" />
+                    <span asp-validation-for="Contrasena" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NombreUsuario" class="control-label">Nombre de usuario</label>
+                    <input asp-for="NombreUsuario" class="form-control" />
+                    <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-4">
+                    <input type="submit" value="Enviar" class="btn btn-primary" />
+                </div>
+            </form>
+
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

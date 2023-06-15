@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -22,12 +24,39 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="AQS_Reportes" asp-action="Index">Reportes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="AQS_Reportes" asp-action="Create">Crear Reporte</a>
-                        </li>
+                    
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.FindFirst(ClaimTypes.Role)?.Value == "Admin")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-controller="AQS_Reportes" asp-action="Create">Crear Reporte</a>
+                                </li>
+                            }
+                           
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-controller="AQS_Reportes" asp-action="Index">Reportes</a>
+                                </li>
+                            
+                        }
+                    </ul>
+                    <ul class="nav nav-tabs ms-auto">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link  text-white  dropdown-item" asp-area="" asp-controller="AQS_Usuarios" asp-action="Logout">
+                                    Cerrar Sesión
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white dropdown-item" asp-controller="AQS_Usuarios" asp-action="Login">
+                                    Iniciar sesión
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
