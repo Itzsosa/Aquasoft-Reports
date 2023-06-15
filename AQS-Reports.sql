@@ -52,3 +52,5 @@ GO
 
 drop table AQS_Usuarios;
 select * from AQS_Usuarios;
+
+--"Server = JOSUEPC\\SQLEXPRESS;database = Aquasoft_Reports ;user id = Aquasoft; password=1234 ; TrustServerCertificate = True"
