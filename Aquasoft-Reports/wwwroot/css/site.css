@@ -1,0 +1,24 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.img-thumbnail {
+    width: 200px; /* Define el ancho deseado */
+    height: 200px; /* Define la altura deseada */
+    object-fit: cover; /* Ajusta la imagen al tamaño definido, manteniendo su relación de aspecto */
+}
