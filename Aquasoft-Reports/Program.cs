@@ -1,8 +1,13 @@
-using Microsoft.EntityFrameworkCore;
+ï»¿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Aquasoft_Reports.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Se configura el esquema de autenticación por medio de cookies en la aplicación web
+builder.Services.AddDbContext<Aquasoft_Reports.Data.Contexto>(options =>
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("StringConexion")));
+
+//Se configura el esquema de autenticaciï¿½n por medio de cookies en la aplicaciï¿½n web
 
 builder.Services.AddAuthentication("CookieAuthentication").AddCookie("CookieAuthentication",
         config =>

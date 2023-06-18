@@ -30,9 +30,9 @@
                 <br />
                 <img id="previewFoto" src="#" alt="Preview" style="max-width: 200px; max-height: 200px; display: none;" />
             </div>
-            <div class="form-group">
+            <div class="form-group" hidden>
                 <label asp-for="Autor" class="control-label"></label>
-                <input asp-for="Autor" class="form-control" />
+                <input asp-for="Autor" class="form-control" id="autor"/>
                 <span asp-validation-for="Autor" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -64,6 +64,15 @@
             };
 
             reader.readAsDataURL(file);
+        });
+
+
+        $(document).ready(function () {
+            // Obtener el nombre de usuario del backend o almacenarlo en una variable global
+            var usuario = '@User.Identity.Name';
+
+            // Autocompletar el campo de autor con el nombre de usuario
+            $('#autor').val(usuario);
         });
     </script>
 }

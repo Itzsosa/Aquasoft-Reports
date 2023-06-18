@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\lmaus\Documents\UCR\4_year\IF-7201\Aquasoft-Reports\Aquasoft-Reports
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/lmaus/Documents/UCR/4_year/IF-7201/Aquasoft-Reports/Aquasoft-Reports/Views/AQS_Eventos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFTX0V2ZW50b3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmaus/Documents/UCR/4_year/IF-7201/Aquasoft-Reports/Aquasoft-Reports/Views/AQS_Eventos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFTX0V2ZW50b3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmaus/Documents/UCR/4_year/IF-7201/Aquasoft-Reports/Aquasoft-Reports/Views/AQS_Eventos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFTX0V2ZW50b3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmaus/Documents/UCR/4_year/IF-7201/Aquasoft-Reports/Aquasoft-Reports/Views/AQS_Eventos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFTX0V2ZW50b3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lmaus/Documents/UCR/4_year/IF-7201/Aquasoft-Reports/Aquasoft-Reports/Views/AQS_Eventos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFTX0V2ZW50b3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lmaus/Documents/UCR/4_year/IF-7201/Aquasoft-Reports/Aquasoft-Reports/Views/AQS_Reportes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVFTX1JlcG9ydGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<Aquasoft_Reports.Models.AQS_Reportes>
+@using System.Security.Claims
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Reportes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Reportes</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p >
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
 </p>
 
 <div class="card-columns">
@@ -24,9 +25,16 @@
                 </p>
             </div>
             <div class="card-footer">
-                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
-                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary">Details</a>
-                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+
+                @if (User.FindFirst(ClaimTypes.Role)?.Value == "Admin")
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                } else
+                {
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary">Details</a>
+                }
             </div>
         </div>
     }

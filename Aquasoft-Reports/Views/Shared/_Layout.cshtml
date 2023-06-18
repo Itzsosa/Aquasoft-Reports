@@ -37,12 +37,20 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-light" asp-area="" asp-controller="AQS_Reportes" asp-action="Index">Reportes</a>
                                 </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="AQS_Eventos" asp-action="Index">Eventos</a>
+                            </li>
                             
                         }
                     </ul>
                     <ul class="nav nav-tabs ms-auto">
                         @if (User.Identity.IsAuthenticated)
                         {
+                            <li class="nav-item">
+                                <p class="nav-link text-white dropdown-item">
+                                    Bienvenido <strong>@User.FindFirst(ClaimTypes.Name)?.Value</strong>
+                                </p>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link  text-white  dropdown-item" asp-area="" asp-controller="AQS_Usuarios" asp-action="Logout">
                                     Cerrar Sesión

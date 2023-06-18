@@ -54,3 +54,24 @@ drop table AQS_Usuarios;
 select * from AQS_Usuarios;
 
 --"Server = JOSUEPC\\SQLEXPRESS;database = Aquasoft_Reports ;user id = Aquasoft; password=1234 ; TrustServerCertificate = True"
+
+
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'AQS_Usuarios')
+BEGIN
+    CREATE TABLE AQS_Usuarios(
+		Id INT PRIMARY KEY IDENTITY(1,1),
+		NombreUsuario VARCHAR(50) NOT NULL,
+		Correo VARCHAR(60) NOT NULL,
+		Contrasena VARCHAR(50) NOT NULL,
+		Rol VARCHAR(20) NOT NULL,
+		Estado char(1) DEFAULT 'A'
+);
+
+    -- Insertar datos de ejemplo en la tabla Usuario
+	INSERT INTO AQS_Usuarios (NombreUsuario,Correo, Contrasena, Rol )
+	VALUES ('Itzsosa','admin@example.com', '3{*2Hsa@#', 'Admin');
+
+	INSERT INTO AQS_Usuarios (NombreUsuario,Correo, Contrasena, Rol )
+	VALUES ('Backsui','user@example.com', '@{+093]":aE', 'User');
+END
+GO

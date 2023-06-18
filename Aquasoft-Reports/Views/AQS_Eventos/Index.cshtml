@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Aquasoft_Reports.Models.AQS_Eventos>
+
+@{
+    ViewData["Title"] = "Eventos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eventos Cercanos</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Crear Nuevo</a>
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.FotoEvento)" class="card-img-top" alt="Foto del Evento">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Titulo</h5>
+                    <p class="card-text">@item.Descripcion</p>
+                    <p class="card-text">Fecha del Evento: @item.FechaEvento.ToShortDateString()</p>
+                    <p class="card-text">Estado: @item.Estado</p>
+                    <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-primary">Editar</a>
+                    <a href="@Url.Action("Details", new { id = item.Id })" class="btn btn-secondary">Detalles</a>
+                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

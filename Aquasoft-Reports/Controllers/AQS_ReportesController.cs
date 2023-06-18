@@ -22,9 +22,11 @@ namespace Aquasoft_Reports.Controllers
         // GET: AQS_Reportes
         public async Task<IActionResult> Index()
         {
-              return _context.AQS_Reportes != null ? 
-                          View(await _context.AQS_Reportes.ToListAsync()) :
-                          Problem("Entity set 'Contexto.AQS_Reportes'  is null.");
+            var reportes = await _context.AQS_Reportes
+            .OrderByDescending(r => r.FechaPublicacion)
+            .ToListAsync();
+
+            return View(reportes);
         }
 
         // GET: AQS_Reportes/Details/5
@@ -139,7 +141,6 @@ namespace Aquasoft_Reports.Controllers
                     throw;
                 }
             }
-
             return RedirectToAction(nameof(Index));
         }
 
