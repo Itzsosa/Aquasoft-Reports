@@ -1,8 +1,60 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+            <img src="~/img/home.jpg" class="d-block w-100 imgInicio" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="color:black">Proyecto Aquasoft</h5>
+                <p style="color:black">
+                    Ayudando a cumplir el objetivo 14 del  Desarrollo Sostenible.
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item container-fluid">
+            <img src="https://images5.alphacoders.com/426/426881.jpg" class="d-block w-100 imgInicio" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style=" font-weight: bold;">Reportes de especies invasoras</h5>
+            </div>
+        </div> 
+        <div class="carousel-item container-fluid">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/015/359/039/original/trash-and-green-colored-plastic-garbage-accumulated-on-the-seashore-video.jpg" class="d-block w-100 imgInicio" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="font-weight: bold;">Reportes de contaminación</h5>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Descripción del proyecto</h3>
+            <p style="text-align: justify;">
+                El sistema permite el monitoreo y gestión de la flora y fauna acuática.
+                Busca promover la participación ciudadana en la conservación y sostenibilidad de los ecosistemas marinos, 
+                al brindar una herramienta accesible e intuitiva, donde se fomenta la colaboración entre los interesados en el
+                medio ambiente, impulsando así la protección y preservación de los recursos 
+                naturales marinos. </p>
+            <p style="text-align: justify;">
+                Asimismo, busca contribuir al cumplimiento del Objetivo 14 del Desarrollo Sostenible de las Naciones Unidas,
+                que se enfoca en conservar y utilizar sosteniblemente los océanos, mares y recursos marinos buscando el desarrollo 
+                sostenible.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/aqua.png" class="img-fluid" alt="Imagen del proyecto">
+        </div>
+    </div>
 </div>
