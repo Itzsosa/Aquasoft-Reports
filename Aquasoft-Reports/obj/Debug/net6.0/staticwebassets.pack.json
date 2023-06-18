@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\lmaus\\Documents\\UCR\\4_year\\IF-7201\\Aquasoft-Reports\\Aquasoft-Reports\\wwwroot\\img\\aqua.png",
+      "PackagePath": "staticwebassets\\img\\aqua.png"
+    },
+    {
+      "Id": "C:\\Users\\lmaus\\Documents\\UCR\\4_year\\IF-7201\\Aquasoft-Reports\\Aquasoft-Reports\\wwwroot\\img\\home.jpg",
+      "PackagePath": "staticwebassets\\img\\home.jpg"
+    },
+    {
       "Id": "C:\\Users\\lmaus\\Documents\\UCR\\4_year\\IF-7201\\Aquasoft-Reports\\Aquasoft-Reports\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
