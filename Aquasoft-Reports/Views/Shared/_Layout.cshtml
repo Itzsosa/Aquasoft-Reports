@@ -22,25 +22,23 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                     
                         @if (User.Identity.IsAuthenticated)
                         {
                             if (User.FindFirst(ClaimTypes.Role)?.Value == "Admin")
                             {
-                                <li class="nav-item">
+                                @*<li class="nav-item">
                                     <a class="nav-link text-light" asp-area="" asp-controller="AQS_Reportes" asp-action="Create">Crear Reporte</a>
-                                </li>
+                                </li>*@
                             }
-                           
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="AQS_Reportes" asp-action="Index">Reportes</a>
-                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="AQS_Reportes" asp-action="Index">Reportes</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" asp-area="" asp-controller="AQS_Eventos" asp-action="Index">Eventos</a>
                             </li>
-                            
                         }
                     </ul>
                     <ul class="nav nav-tabs ms-auto">

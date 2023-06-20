@@ -67,11 +67,14 @@ namespace Aquasoft_Reports.Controllers
                     await fotoInput.CopyToAsync(ms);
                     AQS_Reportes.Fotografia = ms.ToArray();
                 }
+                AQS_Reportes.FechaPublicacion = DateTime.Now;
+                _context.Add(AQS_Reportes);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            } else
+            {
+                return View(AQS_Reportes);
             }
-            AQS_Reportes.FechaPublicacion = DateTime.Now;
-            _context.Add(AQS_Reportes);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         // GET: AQS_Reportes/Edit/5

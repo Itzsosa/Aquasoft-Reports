@@ -58,15 +58,25 @@ namespace Aquasoft_Reports.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Titulo,Descripcion,FechaEvento,FotoEvento,Estado")] AQS_Eventos aQS_Eventos)
+        public async Task<IActionResult> Create(AQS_Eventos aQS_Eventos, IFormFile fotoInput)
         {
-            if (ModelState.IsValid)
+            if (fotoInput != null && fotoInput.Length > 0)
             {
+                using (var ms = new MemoryStream())
+                {
+                    await fotoInput.CopyToAsync(ms);
+                    aQS_Eventos.FotoEvento = ms.ToArray();
+                }
+                aQS_Eventos.Estado = 'A';
                 _context.Add(aQS_Eventos);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(aQS_Eventos);
+            else
+            {
+                return View(aQS_Eventos);
+            }
+            
         }
 
         // GET: AQS_Eventos/Edit/5

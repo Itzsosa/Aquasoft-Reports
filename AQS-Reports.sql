@@ -53,6 +53,7 @@ GO
 drop table AQS_Usuarios;
 select * from AQS_Usuarios;
 
+
 --"Server = JOSUEPC\\SQLEXPRESS;database = Aquasoft_Reports ;user id = Aquasoft; password=1234 ; TrustServerCertificate = True"
 
 
@@ -65,18 +66,14 @@ BEGIN
 		FechaEvento DateTime NOT NULL,
 		FotoEvento Varbinary(max) NOT NULL,
 		Estado char(1) DEFAULT 'A'
-
 );
 
     -- Insertar datos de ejemplo en la tabla Usuario
 	INSERT INTO AQS_Eventos (Titulo,Descripcion, FechaEvento, FotoEvento )
 	VALUES ('El agua es un derecho del pueblo','Manifestacion contra los daños ambientales del esteto puntarenas', GETDATE(), 0x0123456789ABCDEF);
 
-	INSERT INTO AQS_Eventos (Titulo,Descripcion, FechaEvento, FotoEvento )
+	INSERT INTO AQS_Eventos (Titulo,Descripcion, FechaEvento, FotoEvento)
 	VALUES ('El agua ','Manifestacion contra los daños ambientales del esteto puntarenas', GETDATE(), 0x0123456789ABCDEF);
-
-	INSERT INTO AQS_Eventos (Titulo,Descripcion, FechaEvento, FotoEvento )
-	VALUES ('El agua vino','c vino', GETDATE(), 0x0123456789ABCDEF);
 	
 END
 GO

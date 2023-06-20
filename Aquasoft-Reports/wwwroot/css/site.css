@@ -18,7 +18,7 @@ body {
 }
 
 .img-thumbnail {
-    width: 200px; /* Define el ancho deseado */
-    height: 200px; /* Define la altura deseada */
+    width: 600px; /* Define el ancho deseado */
+    height: 600px; /* Define la altura deseada */
     object-fit: cover; /* Ajusta la imagen al tamaño definido, manteniendo su relación de aspecto */
 }
